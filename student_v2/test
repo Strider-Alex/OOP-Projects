@@ -1,10 +1,11 @@
-alex 1 4 7
-soft 1 7 5
-jason 7 8 5
-summit 5 4 2
-marry 4 7 3
-leo 8 5 2
-lion 7 5 2
-bull 7 4 2
-sherry 2 3 5
-bob 8 5 2
+alex math 1 english 4  pe 7 #
+soft math 1 chinese 7 pe 5 #
+jason chinese 7 pe 8  music 5 #
+summit physics 5 pe 4 music 2 #
+marry math 4 pe 7 chinese 3 #
+leo math 8 chinese 5 music 2 #
+lion english 7 pe 5 math 2 #
+bull english 7 chinese 4 math 2 #
+sherry pe 2 chinese 3 english 5 #
+bob pe 8 chinese 5 math 2 #
+##

@@ -8,7 +8,7 @@ using namespace std;
 class Student_record {
     public:
         Student_record();
-        void addStudent(string name, vector<double> &a);
+        void addStudent(string name, vector<string> &courses, vector<double> &scores);
         void show();
     private:
         vector<Student> students;

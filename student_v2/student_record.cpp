@@ -11,17 +11,14 @@
 using namespace std;
 Student_record::Student_record(){}
 
-void Student_record::addStudent(string name, vector<double> &a){
-    vector<double>::iterator i;
+void Student_record::addStudent(string name, vector<string> &in_courses, vector<double> &scores){
+    double score;
+	vector<string>::iterator i;
 	Student student(name);
-	stringstream ss;
-	string course;
-	for(i=a.begin();i<a.end();i++){
-		ss.clear();
-		ss << "Score" << i-a.begin()+1;
-		ss >> course;
-		student.addScore(course,*i);//update student
-		courses[course].addScore(*i);//update courses
+	for(i=in_courses.begin();i<in_courses.end();i++){
+		score = scores[i-in_courses.begin()];
+		student.addScore(*i,score);//update student
+		courses[*i].addScore(score);//update courses
 	}
 	students.push_back(student);
 }
@@ -39,7 +36,12 @@ void Student_record::show(){
         cout <<setw(SHORTSPACE)<< j-students.begin()+1; //print index of student
         cout <<setw(LONGSPACE)<< j->getName(); //print name of student
 		for(i=courses.begin();i!=courses.end();i++){
-			cout <<setw(LONGSPACE) <<j->getScore(i->first); //pirnt score of student
+			if(j->getScore(i->first)>0){
+				cout <<setw(LONGSPACE) <<j->getScore(i->first); //pirnt score of student
+			}
+			else {
+				cout <<setw(LONGSPACE) <<"N/A";
+			}
 		}
 		cout <<setw(LONGSPACE)<<j->getAverage()<<endl; //printf average score
     }
