@@ -1,0 +1,3 @@
+these programs may require a new g++ version
+--albe to compile on g++ 6
+--unable to compile on g++ 4.8
